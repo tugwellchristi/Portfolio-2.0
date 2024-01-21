@@ -7,7 +7,7 @@ import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import './AppBar.css'
+
 
 const pages = ['About', 'Projects', 'Contact', 'Resume'];
 
@@ -23,10 +23,19 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar className="appbar" sx={{ height: '150px', width: '100%', top: 0, position: 'fixed' }}>
+    <AppBar
+      className="appbar"
+      sx={{
+        height: '150px',
+        width: '100%',
+        top: 0,
+        position: 'fixed',
+        backgroundColor: 'black'
+      }}
+    >
       <Container maxWidth="xl" sx={{ maxWidth: '100%' }}>
         <Toolbar disableGutters>
-        <Typography
+          <Typography
             variant="h6"
             noWrap
             component="a"
@@ -64,7 +73,7 @@ function ResponsiveAppBar() {
             sx={{
               display: { xs: 'block', md: 'none' },
               '& .MuiMenuItem-root': {
-                margin: '8px 0', 
+                margin: '8px 0',
                 padding: '16px',
                 fontSize: '1.5rem',
               },
@@ -78,19 +87,19 @@ function ResponsiveAppBar() {
           </Menu>
 
           <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-          {pages.map((page) => (
-            <Button
-              key={page}
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', fontSize: '1.5rem', marginTop: '40px' }}
-            >
-              {page}
-            </Button>
-          ))}
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', fontSize: '1.5rem', marginTop: '40px' }}
+              >
+                {page}
+              </Button>
+            ))}
 
-        </Box>
-      </Toolbar>
-    </Container>
+          </Box>
+        </Toolbar>
+      </Container>
     </AppBar >
   );
 }

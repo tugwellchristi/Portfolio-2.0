@@ -1,4 +1,4 @@
-// import Header from './components/Header/Header';
+import Header from './components/Header/Header';
 import AppBar from './components/AppBar/AppBar';
 import './App.css'
 
@@ -6,7 +6,7 @@ function App() {
   return (
 
     <div>
-      {/* <Header />  */}
+      <Header /> 
       <AppBar />
      {/* <Project />
      <Footer /> */} 
