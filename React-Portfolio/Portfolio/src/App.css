@@ -5,3 +5,18 @@
   text-align: center;
 }
 
+body {
+  background-color: #0482C4ff;
+}
+
+/* SCSS Gradient 
+$gradient-top: linear-gradient(0deg, #301D2Cff, #0482C4ff, #D43EB3ff, #E8591Aff, #0763AAff);
+*/
+
+/* CSS HEX 
+--dark-purple: #301D2Cff;
+--blue-ncs: #0482C4ff;
+--steel-pink: #D43EB3ff;
+--flame: #E8591Aff;
+--green-blue: #0763AAff;
+*/
