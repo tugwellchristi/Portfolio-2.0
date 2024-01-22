@@ -1,18 +1,19 @@
-import Header from './components/Header/Header';
-import AppBar from './components/AppBar/AppBar';
+import { Outlet } from 'react-router-dom';
+import AppBar from './components/AppBar';
+import Footer from './components/Footer';
 import './App.css'
 
 function App() {
   return (
-
-    <div>
-      <Header /> 
+    <div className="flex-column justify-flex-start min-100-vh">
       <AppBar />
-     {/* <Project />
-     <Footer /> */} 
-
+      <div className="mx-3">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
-  )
+
+  );
 }
 
 export default App;

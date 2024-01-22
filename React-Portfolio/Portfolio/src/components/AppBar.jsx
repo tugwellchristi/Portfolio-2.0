@@ -1,0 +1,134 @@
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import Container from '@mui/material/Container';
+import MenuItem from '@mui/material/MenuItem';
+import { Link, useLocation } from 'react-router-dom';
+import Button from '@mui/material/Button';
+
+
+const pages = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Projects', path: '/projects' },
+  { name: 'Contact', path: '/contact' },
+  { name: 'Resume', path: '/resume' },
+];
+
+function ResponsiveAppBar() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const location = useLocation();
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  return (
+    <AppBar
+      className="appbar"
+      sx={{
+        height: '150px',
+        width: '100%',
+        top: 0,
+        position: 'fixed',
+        backgroundColor: 'black',
+        color: 'white',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Container maxWidth="xl" sx={{ maxWidth: '100%' }}>
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            noWrap
+            sx={{
+              flexGrow: 1,
+              textAlign: 'center',
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+              fontSize: '2rem',
+              marginTop: '40px',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            }}
+          >
+            {/* Link for Home */}
+            <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+              HOME
+            </Link>
+          </Typography>
+
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: 'block', md: 'none' },
+              '& .MuiMenuItem-root': {
+                margin: '8px 0',
+                padding: '16px',
+                fontSize: '1.5rem',
+              },
+            }}
+          >
+            {/* Use Link for each menu item */}
+            {pages.map((page) => (
+              <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <Link
+                  to={page.path}
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
+                </Link>
+              </MenuItem>
+            ))}
+          </Menu>
+
+          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
+            {/* Use Link for each button */}
+            {pages.map((page) => (
+              <Button
+                key={page.name}
+                onClick={handleCloseNavMenu}
+                sx={{ 
+                  my: 2, 
+                  color: 'white', 
+                  fontSize: '1.5rem', 
+                  marginTop: '40px' 
+                }}
+                component={Link}
+                to={page.path}
+              >
+                {page.name}
+              </Button>
+            ))}
+
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar >
+  );
+}
+export default ResponsiveAppBar;
