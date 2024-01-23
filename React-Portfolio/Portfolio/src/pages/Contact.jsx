@@ -1,21 +1,42 @@
-export default function Contact() {
+import React from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import backgroundImage from '../assets/Abstract.png';
+
+
+function Contact() {
     return (
-      <div>
-        <h1>Contact Page</h1>
-        <p>
-          Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-          molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-          magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-          efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-          mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-          posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-          faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-          ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-          dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-          rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-        </p>
-      </div>
+        <Box
+            sx={{
+                height: '750px',
+                width: '100vw',
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'fixed',
+                zIndex: 1,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'white',
+                flexGrow: 1,
+                fontSize: '2rem',
+                marginTop: '60px',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            }}
+        >
+            <Typography variant='h3' fontWeight='bold' mb={2}>
+                Let's Connect!
+            </Typography>
+            <Typography variant='h5'>
+                Front End Developer And Web Designer
+            </Typography>
+        </Box>
     );
-  }
-  
+}
+
+export default Contact;

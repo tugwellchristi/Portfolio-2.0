@@ -30,7 +30,7 @@ function Home() {
             }}
         >
             <Typography variant='h3' fontWeight='bold' mb={2}>
-                HI, I'M CHRISTI TUGWELL!
+                HI, I'M CHRISTI!
             </Typography>
             <Typography variant='h5'>
                 Front End Developer And Web Designer

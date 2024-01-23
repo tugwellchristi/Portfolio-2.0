@@ -11,9 +11,9 @@ import Button from '@mui/material/Button';
 
 
 const pages = [
-  { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Projects', path: '/projects' },
+  { name: 'Education', path: '/education' },
   { name: 'Contact', path: '/contact' },
   { name: 'Resume', path: '/resume' },
 ];
@@ -66,7 +66,7 @@ function ResponsiveAppBar() {
           >
             {/* Link for Home */}
             <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
-              HOME
+              CHRISTI TUGWELL
             </Link>
           </Typography>
 
