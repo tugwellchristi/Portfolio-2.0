@@ -8,7 +8,7 @@ function Home() {
     return (
         <Box
             sx={{
-                height: '750px',
+                height: '625px',
                 width: '100vw',
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',

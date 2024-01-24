@@ -1,53 +1,72 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import React from 'react';
 
 function About() {
-    const backgroundStyles = {
-        height: '750px',
-        width: '100vw',
-        backgroundColor: '#025EA5ff',
-        position: 'fixed',
-        zIndex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexGrow: 1,
-        marginTop: '60px',
-        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-    };
-
-    const fontStyles = {
-        fontFamily: 'monospace',
-        fontWeight: 700,
-        letterSpacing: '.3rem',
-        color: 'white',
-        fontSize: 'calc(2rem /1.3)',
-        margin: '0',
-    };
     return (
-        <Box sx={{ ...backgroundStyles, ...fontStyles, }}>
-            <Typography variant='h3' mb={2}>
-                Front-end & UX/UI minded with full stack tendencies.
-            </Typography>
-            <Typography variant='body1'>
-                I've always enjoyed creative challenges, working with people, and being project oriented. Taking basic elements and turning them into something visually meaningful is incredibly rewarding. Ive used these principles personally with various DIY projects and professionally as a pastry chef, in various hospitality roles, and in creating marketing materials across various mediums.
-                <br />
-                <br />
-                Based in the Pacfic Northwest, I find my inspiration from nature, music, immersive art installations, motorcycles, travel, and
-                creating of all sorts! I lean heavily into loud, maximalist art but also appreciate simple, delicate things. I believe balance is key!
-                <br />
-                <br />
-                I look forward to meeting others and creating meaningful digital experiences together!
-            </Typography>
-            <Typography variant='h4' mb={2}>
-                Current Focus: Front-End Development // Web Design // UX/UI
-            </Typography>
-        </Box>
+        <section
+            id="about"
+            style={{
+                height: '625px',
+                width: '100vw',
+                background: 'linear-gradient(90deg, #00364Aff, #BD1235ff, #004690ff, #2A1F49ff,  #5A4280ff)',
+                position: 'fixed',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                zIndex: 1,
+                marginTop: '60px',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+            }}
+        >
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    maxWidth: '1200px',
+                }}
+            >
+                <div
+                    style={{ maxWidth: '800px', marginRight: '30px' }}>
+                    <h1
+                        style={{
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            letterSpacing: '0.3rem',
+                            color: 'white',
+                            fontSize: 'calc(2.5rem / 1.3)',
+                            margin: 0,
+                        }}
+                    >
+                        Front-end & UX/UI minded with Full Stack tendencies
+                    </h1>
+                        <br />
+                        
+                    <p
+                        style={{ color: 'white', marginBottom: '20px', fontFamily: 'monospace', fontSize: '1.2em' }}>
+                        I've been know to wear many hats. After a decade in hospitality management, I moved over to advertising and marketing and began a MS in Art and Technology. I followed that with a Full Stack Development Bootcamp, which I am close to wrapping up. I highly enjoy using Unity for designing 3D environments, Glitch.com and A-Frame to create VR spaces, working in Adobe Premiere Pro and After Effects to create videos, and learning front end programs with an emphasis on UX/UI principles. I'm still working out the rest!
+                        <br />
+                        <br />
+
+                        Based in the Pacfic Northwest, I find my inspiration from nature, music, immersive art installations, motorcycles, travel, and
+                        creating of all sorts! I lean heavily into loud, maximalist art but also appreciate simple, delicate things. I believe balance is key!
+                        </p>
+                        <br />
+                       
+                       <h2 style={{ color: 'white', marginBottom: '20px', fontFamily: 'monospace' }}> I look forward to meeting others and creating meaningful digital experiences together! </h2>
+                    
+                </div>
+                <div
+                    style={{ maxWidth: '600px' }}>
+                    <img
+                        src="/Me.jpg"
+                        alt="Self portrait"
+                        style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+                    />
+                </div>
+            </div>
+        </section>
     );
-};
+}
 
 export default About;

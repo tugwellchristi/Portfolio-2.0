@@ -1,16 +1,14 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import backgroundImage from '../assets/Abstract.png';
-
 
 function Contact() {
     return (
         <Box
             sx={{
-                height: '750px',
+                height: '625px',
                 width: '100vw',
-                backgroundImage: `url(${backgroundImage})`,
+                background: 'linear-gradient(270deg, #00364Aff, #BD1235ff, #004690ff, #2A1F49ff,  #5A4280ff)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 position: 'fixed',
