@@ -5,14 +5,13 @@ function About() {
         <section
             id="about"
             style={{
-                height: '700px',
+                height: '810px',
                 width: '100vw',
                 background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                zIndex: 1,
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
         >
@@ -32,7 +31,7 @@ function About() {
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '0.3rem',
-                            color: 'white',
+                            color: '#D24FB3ff',
                             fontSize: 'calc(2.5rem / 1.3)',
                             margin: 0,
                         }}
@@ -52,7 +51,9 @@ function About() {
                         </p>
                         <br />
                        
-                       <h2 style={{ color: 'white', marginBottom: '20px', fontFamily: 'monospace' }}> I look forward to meeting others and creating meaningful digital experiences together! </h2>
+                       <p style={{ color: '#D24FB3ff', marginBottom: '20px', fontFamily: 'monospace', fontSize: '1.3em' }}> 
+                       I look forward to meeting others and creating meaningful digital experiences together! 
+                       </p>
                     
                 </div>
                 <div

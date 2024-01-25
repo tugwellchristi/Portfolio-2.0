@@ -5,9 +5,9 @@ function Footer() {
     const iconColor = '#D24FB3ff';
 
     return (
-        <footer className="text-white py-4  bottom-0 left-0 right-0" style={{ backgroundColor: '#151D52ff'}}>
-            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
-            <div className="md:w-full text-center">
+        <section className="text-white py-4" style={{ backgroundColor: '#151D52ff', height: '125px' }}>
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div className="flex space-x-4 items-center">
                     <a href="https://github.com/tugwellchristi" target="_blank" rel="noopener noreferrer" className="mr-5 hover:text-white">
                         <FaGithubSquare size={32} style={{ color: iconColor }} />
                     </a>
@@ -22,7 +22,7 @@ function Footer() {
                     <p> &copy; 2024 Christi Tugwell. All rights reserved. </p>
                 </div>
             </div>
-        </footer>
+        </section>
     );
 }
 

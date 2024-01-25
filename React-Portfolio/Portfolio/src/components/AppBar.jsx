@@ -18,6 +18,8 @@ const pages = [
 ];
 
 function ResponsiveAppBar() {
+  const hoverColor = '#FFFFFF';
+  const textColor = '#D24FB3ff';
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const location = useLocation();
 
@@ -56,7 +58,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'white',
+              color: location.pathname === '/' ? hoverColor : textColor,
               textDecoration: 'none',
               fontSize: '2rem',
               marginTop: '20px',
@@ -64,7 +66,7 @@ function ResponsiveAppBar() {
             }}
           >
             {/* Link for Home */}
-            <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
               CHRISTI TUGWELL
             </Link>
           </Typography>
@@ -97,7 +99,7 @@ function ResponsiveAppBar() {
               <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                 <Link
                   to={page.path}
-                  style={{ color: '#FA6A0Aff', textDecoration: 'none' }}
+                  style={{ color: location.pathname === page.path ? hoverColor : '#FA6A0Aff', textDecoration: 'none' }}
                 >
                   <Typography textAlign="center">{page.name}</Typography>
                 </Link>
@@ -113,7 +115,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ 
                   my: 2, 
-                  color: '#D24FB3ff', 
+                  color: location.pathname === page.path ? hoverColor : textColor, 
                   fontSize: '1.5rem', 
                   marginTop: '40px' 
                 }}
