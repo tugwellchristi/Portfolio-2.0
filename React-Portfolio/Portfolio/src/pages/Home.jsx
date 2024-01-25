@@ -8,12 +8,11 @@ function Home() {
     return (
         <Box
             sx={{
-                height: '625px',
+                height: '100vh',
                 width: '100vw',
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                position: 'fixed',
                 zIndex: 1,
                 display: 'flex',
                 flexDirection: 'column',
@@ -29,11 +28,11 @@ function Home() {
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
         >
-            <Typography variant='h3' fontWeight='bold' mb={2}>
+            <Typography variant='h3' fontWeight='bold' mb={2} style={{ fontFamily: 'monospace' }}>
                 HI, I'M CHRISTI!
             </Typography>
-            <Typography variant='h5'>
-                Front End Developer And Web Designer
+            <Typography variant='h5' style={{ fontFamily: 'monospace' }}>
+                Front-End Developer // Web Designer
             </Typography>
         </Box>
     );

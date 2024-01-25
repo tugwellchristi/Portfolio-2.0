@@ -13,7 +13,6 @@ import Button from '@mui/material/Button';
 const pages = [
   { name: 'About', path: '/about' },
   { name: 'Projects', path: '/projects' },
-  { name: 'Education', path: '/education' },
   { name: 'Contact', path: '/contact' },
   { name: 'Resume', path: '/resume' },
 ];
@@ -34,11 +33,11 @@ function ResponsiveAppBar() {
     <AppBar
       className="appbar"
       sx={{
-        height: '150px',
+        height: '125px',
         width: '100%',
         top: 0,
         position: 'fixed',
-        backgroundColor: 'black',
+        backgroundColor: '#151D52ff',
         color: 'white',
         display: 'flex',
         flexDirection: 'column',
@@ -57,10 +56,10 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'white',
               textDecoration: 'none',
               fontSize: '2rem',
-              marginTop: '40px',
+              marginTop: '20px',
               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
           >
@@ -98,7 +97,7 @@ function ResponsiveAppBar() {
               <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                 <Link
                   to={page.path}
-                  style={{ color: 'inherit', textDecoration: 'none' }}
+                  style={{ color: '#FA6A0Aff', textDecoration: 'none' }}
                 >
                   <Typography textAlign="center">{page.name}</Typography>
                 </Link>
@@ -114,7 +113,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ 
                   my: 2, 
-                  color: 'white', 
+                  color: '#D24FB3ff', 
                   fontSize: '1.5rem', 
                   marginTop: '40px' 
                 }}

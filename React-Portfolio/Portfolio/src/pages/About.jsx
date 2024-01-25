@@ -5,16 +5,14 @@ function About() {
         <section
             id="about"
             style={{
-                height: '625px',
+                height: '700px',
                 width: '100vw',
-                background: 'linear-gradient(90deg, #00364Aff, #BD1235ff, #004690ff, #2A1F49ff,  #5A4280ff)',
-                position: 'fixed',
+                background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
                 zIndex: 1,
-                marginTop: '60px',
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
         >
@@ -24,6 +22,7 @@ function About() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     maxWidth: '1200px',
+                    marginTop: '160px'
                 }}
             >
                 <div
@@ -44,7 +43,7 @@ function About() {
                         
                     <p
                         style={{ color: 'white', marginBottom: '20px', fontFamily: 'monospace', fontSize: '1.2em' }}>
-                        I've been know to wear many hats. After a decade in hospitality management, I moved over to advertising and marketing and began a MS in Art and Technology. I followed that with a Full Stack Development Bootcamp, which I am close to wrapping up. I highly enjoy using Unity for designing 3D environments, Glitch.com and A-Frame to create VR spaces, working in Adobe Premiere Pro and After Effects to create videos, and learning front end programs with an emphasis on UX/UI principles. I'm still working out the rest!
+                        I've been known to wear many hats. After a decade in hospitality management, I moved over to advertising and marketing and began a MS in Art and Technology. I followed that with a Full Stack Development Bootcamp, which I am close to wrapping up. I highly enjoy using Unity for designing 3D environments, Glitch.com and A-Frame to create VR spaces, working in Adobe Premiere Pro and After Effects to create videos, and learning front end programs with an emphasis on UX/UI principles. I'm still working out the rest!
                         <br />
                         <br />
 

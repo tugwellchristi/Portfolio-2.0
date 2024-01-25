@@ -2,13 +2,14 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+
 function Contact() {
     return (
         <Box
             sx={{
                 height: '625px',
                 width: '100vw',
-                background: 'linear-gradient(270deg, #00364Aff, #BD1235ff, #004690ff, #2A1F49ff,  #5A4280ff)',
+                background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 position: 'fixed',

@@ -1,44 +1,28 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import { FaGithubSquare, FaLinkedin, FaDiscord } from 'react-icons/fa';
 
 function Footer() {
+    const iconColor = '#D24FB3ff';
+
     return (
-        <Box
-            sx={{
-                position: 'fixed',
-                bottom: 0,
-                left: 0,
-                width: '100%',
-                height: '100px',
-                backgroundColor: 'black',
-                color: 'white',
-                textAlign: 'center',
-                padding: '20px',
-                fontFamily: 'monospace',
-                fontSize: '1.5rem',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
-            <div>
-                {/* LinkedIn Icon */}
-                {/* <SocialIcon url='https://www.linkedin.com/in/christi-tugwell-a67194104/' style={{ marginRight: '10px' }} /> */}
-
-                {/* GitHub Icon */}
-                {/* <SocialIcon url="your-github-url" style={{ marginRight: '10px' }} /> */}
-
-                {/* Discord Icon */}
-                {/* <SocialIcon url="your-discord-url" style={{ marginRight: '10px' }} /> */}
-
-                {/* Email Icon */}
-                {/* <SocialIcon url="mailto:your-email@example.com" /> */}
+        <footer className="text-white py-4  bottom-0 left-0 right-0" style={{ backgroundColor: '#151D52ff'}}>
+            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+            <div className="md:w-full text-center">
+                    <a href="https://github.com/tugwellchristi" target="_blank" rel="noopener noreferrer" className="mr-5 hover:text-white">
+                        <FaGithubSquare size={32} style={{ color: iconColor }} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/christi-tugwell-a67194104/" target="_blank" rel="noopener noreferrer" className="mr-5 hover:text-white">
+                        <FaLinkedin size={32} style={{ color: iconColor }} />
+                    </a>
+                    <a href="https://discord.com/channels/@me" target="_blank" rel="noopener noreferrer" className="mr-5 hover:text-white">
+                        <FaDiscord size={32} style={{ color: iconColor }} />
+                    </a>
+                </div>
+                <div className="text-center" style={{ color: 'white' }}>
+                    <p> &copy; 2024 Christi Tugwell. All rights reserved. </p>
+                </div>
             </div>
-            <Typography variant='body1'>
-                @ 2024 Christi Tugwell. All rights reserved.
-            </Typography>
-        </Box>
+        </footer>
     );
 }
 
