@@ -35,7 +35,7 @@ const Contact = () => {
             <div
             style={{
                 width: '800px',
-                backgroundImage: '/Abstract.png';
+                bacgroundColor: 'blue',
                 padding: '13px', 
                 borderRadius: '10px',
                 marginRight: '20px',
@@ -43,22 +43,23 @@ const Contact = () => {
             >
                 <form name="contact" onSubmit={handleSubmit}>
                     <div>
-                        <labe htmlFor="name" style={{ color: 'white' }}>
+                        <label htmlFor="name" style={{ color: 'white' }}>
                             Name
                         </label>
                         <input 
                         type="text"
                         id="name"
                         onChange={(e) => setName(e.target.value)}
-                        style={{ width: '100%' }}
-                        >
-                        
-                        </input>
+                        style={{ 
+                            width: '100%' 
+                        }}
+                        />
                     </div>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
     );
-}
-}
+};
+
 export default Contact;
