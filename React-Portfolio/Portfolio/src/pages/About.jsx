@@ -20,7 +20,7 @@ function About() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    maxWidth: '1200px',
+                    maxWidth: '1300px',
                     marginTop: '160px'
                 }}
             >
@@ -36,13 +36,16 @@ function About() {
                             margin: 0,
                         }}
                     >
-                        Front-end & UX/UI minded with Full Stack tendencies
+                        Front-End & UX/UI minded with Full Stack tendencies
                     </h1>
                         <br />
                         
                     <p
                         style={{ color: 'white', marginBottom: '20px', fontFamily: 'monospace', fontSize: '1.2em' }}>
-                        I've been known to wear many hats. After a decade in hospitality management, I moved over to advertising and marketing and began a MS in Art and Technology. I followed that with a Full Stack Development Bootcamp, which I am close to wrapping up. I highly enjoy using Unity for designing 3D environments, Glitch.com and A-Frame to create VR spaces, working in Adobe Premiere Pro and After Effects to create videos, and learning front end programs with an emphasis on UX/UI principles. I'm still working out the rest!
+                        I've been known to wear many hats over the years. After a decade in hospitality management, I moved over to advertising and marketing, and shortly after, I began a MA in Art and Technology. Next, I enrolled in a Full Stack Development Bootcamp, which I am currently wrapping up. I'm excited to begin my developer journey!
+                        <br />
+                        <br />
+                        I greatly enjoy Unity for designing 3D environments, Glitch.com and A-Frame to create AR/VR spaces, Adobe Premiere Pro and After Effects to create videos, and becoming proficient in front-end languages with an emphasis on UX/UI principles. I'm still working out the rest!
                         <br />
                         <br />
 

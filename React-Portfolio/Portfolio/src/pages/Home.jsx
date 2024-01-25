@@ -24,11 +24,11 @@ function Home() {
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
         >
-            <h2 fontWeight='bold' style={{ fontFamily: 'monospace' }}>
+            <h2 fontWeight='bold' style={{ fontFamily: 'monospace', fontSize: '60px' }}>
                 HI, I'M CHRISTI!
             </h2>
             <h4 style={{ fontFamily: 'monospace' }}>
-                Front-End Developer // Web Designer
+                Front-End Developer // Web Designer // Art Enthusiast
             </h4>
         </div>
     );

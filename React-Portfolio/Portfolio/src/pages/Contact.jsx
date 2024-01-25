@@ -1,17 +1,20 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import React, { useState } from 'react';
 
+const Contact = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
-function Contact() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
     return (
-        <Box
-            sx={{
+        <div
+            style={{
                 height: '625px',
                 width: '100vw',
                 background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 position: 'fixed',
                 zIndex: 1,
                 display: 'flex',
@@ -28,14 +31,34 @@ function Contact() {
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
         >
-            <Typography variant='h3' fontWeight='bold' mb={2}>
-                Let's Connect!
-            </Typography>
-            <Typography variant='h5'>
-                Front End Developer And Web Designer
-            </Typography>
-        </Box>
+            <h1>Let's Connect!</h1>
+            <div
+            style={{
+                width: '800px',
+                backgroundImage: '/Abstract.png';
+                padding: '13px', 
+                borderRadius: '10px',
+                marginRight: '20px',
+            }}
+            >
+                <form name="contact" onSubmit={handleSubmit}>
+                    <div>
+                        <labe htmlFor="name" style={{ color: 'white' }}>
+                            Name
+                        </label>
+                        <input 
+                        type="text"
+                        id="name"
+                        onChange={(e) => setName(e.target.value)}
+                        style={{ width: '100%' }}
+                        >
+                        
+                        </input>
+                    </div>
+                </form>
+            </div>
+        </div>
     );
 }
-
+}
 export default Contact;
