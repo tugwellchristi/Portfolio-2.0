@@ -4,26 +4,31 @@ import { FaGithubSquare } from 'react-icons/fa';
 
 const CustomCard = ({ image, title, description, link, githubLink }) => {
   return (
-      <Card style={{ backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column' }}>
-        <a href={link} target="_blank" rel="noopener noreferrer">
+    <Card className="custom-card" style={{ margin: '25px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column' }}>
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <CardMedia
           component="img"
           alt={title}
           height="300"
           image={image}
         />
+      </a>
+      <div style={{ marginLeft: '25px' }}>
+        <h1 style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '1.7em', marginTop: '10px' }}>{title}</h1>
+        <p style={{ fontFamily: 'monospace', color: 'white', fontSize: '1.2em', width: '70%' }}>{description}</p>
+      </div>
+      <div style={{ marginLeft: '22px', marginBottom: '10px', marginTop: '3px' }}>
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          <FaGithubSquare style={{ width: '30px', height: '30px', color: 'white' }} />
         </a>
-        <div style={{ marginLeft: '25px'}}>
-          <h1 style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '1.7em', marginTop: '10px'}}>{title}</h1>
-          <p style={{ fontFamily: 'monospace', color: 'white', fontSize: '1.2em', width: '70%' }}>{description}</p>
-        </div>
-        <div style={{ marginLeft: '22px', marginBottom: '10px', marginTop: '3px'}}>
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <FaGithubSquare style={{ width: '30px', height: '30px', color: 'white' }} />
-          </a>
-        </div>
-      </Card>
-    
+      </div>
+      <style jsx>{`
+        .custom-card:hover {
+          transform: scale(1.5);
+          transition: transform 0.3s ease-in-out;
+        }
+      `}</style>
+    </Card>
   );
 };
 
@@ -58,11 +63,11 @@ function Projects() {
       githubLink: "https://github.com/tugwellchristi/JavaScript-Password-Generator",
     },
     {
-      image: "/Syntax.png",
+      image: "/Weather.png",
       title: "Weather Dashboard",
       description: "Server-Side APIs Project",
       link: "https://simple-brash-vole.glitch.me/",
-      githubLink: "https://github.com/grayd500/Syntax",
+      githubLink: "https://github.com/tugwellchristi/Weather-Dashboard",
     },
     {
       image: "/Scheduler.png",
@@ -72,21 +77,21 @@ function Projects() {
       githubLink: "https://github.com/tugwellchristi/Daily-Task-PlannerLinks",
     },
     {
-      image: "/Syntax.png",
-      title: "Syntax Band Website",
-      description: "MERN Group Project",
-      link: "https://github.com/grayd500/Syntax",
-      githubLink: "https://github.com/grayd500/Syntax",
+      image: "/SocialDB.png",
+      title: "Social Network API",
+      description: "NoSQL Project",
+      link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
+      githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
     },
     {
-      image: "/Syntax.png",
-      title: "Syntax Band Website",
-      description: "MERN Group Project",
-      link: "https://github.com/grayd500/Syntax",
-      githubLink: "https://github.com/grayd500/Syntax",
+      image: "/Notes.png",
+      title: "Note Taker",
+      description: "Express.js Project",
+      link: "https://v2-notes-application-e1495e7ac2dc.herokuapp.com/notes",
+      githubLink: "https://github.com/tugwellchristi/Note-Taker?tab=readme-ov-file",
     },
     {
-      image: "/Syntax.png",
+      image: "/ReadME.png",
       title: "README.md Generator",
       description: "Node.js Project",
       link: "https://drive.google.com/file/d/1KuxJYpoeBgrCfwYyjjuYIRBt4g2Ojwe0/view",
@@ -117,6 +122,12 @@ function Projects() {
           ))}
         </Grid>
       </div>
+      <style jsx>{`
+  .custom-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+`}</style>
     </section>
   );
 }
