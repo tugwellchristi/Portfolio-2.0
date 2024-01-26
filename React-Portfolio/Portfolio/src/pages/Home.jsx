@@ -6,7 +6,7 @@ function Home() {
     return (
         <div
             style={{
-                height: '750px',
+                height: '780px',
                 width: '100vw',
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
@@ -28,7 +28,7 @@ function Home() {
                 HI, I'M CHRISTI!
             </h2>
             <h4 style={{ fontFamily: 'monospace' }}>
-                Front-End Developer // Web Designer // Art Enthusiast
+            Front-End Developer <span style={{ color: '#D24FB3ff', position: 'relative', zIndex: 1 }}>//</span> Web Designer <span style={{ color: '#D24FB3ff', position: 'relative', zIndex: 1 }}>//</span> Art Enthusiast
             </h4>
         </div>
     );

@@ -10,25 +10,17 @@ const Contact = () => {
     };
 
     return (
-        <div
+        <section
+            id="about"
             style={{
-                height: '625px',
+                height: '840px',
                 width: '100vw',
                 background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
-                position: 'fixed',
-                zIndex: 1,
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'white',
-                flexGrow: 1,
-                fontSize: '2rem',
-                marginTop: '60px',
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
         >
             <h1>Let's Connect!</h1>
@@ -58,8 +50,8 @@ const Contact = () => {
                     <button type="submit">Submit</button>
                 </form>
             </div>
-        </div>
+        </section>
     );
-};
+}
 
 export default Contact;

@@ -5,7 +5,7 @@ function About() {
         <section
             id="about"
             style={{
-                height: '810px',
+                height: '840px',
                 width: '100vw',
                 background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
                 display: 'flex',
@@ -42,21 +42,19 @@ function About() {
                         
                     <p
                         style={{ color: 'white', marginBottom: '20px', fontFamily: 'monospace', fontSize: '1.2em' }}>
-                        I've been known to wear many hats over the years. After a decade in hospitality management, I moved over to advertising and marketing, and shortly after, I began a MA in Art and Technology. Next, I enrolled in a Full Stack Development Bootcamp, which I am currently wrapping up. I'm excited to begin my developer journey!
+                        I've worn many hats over the years. After a decade in hospitality management, I moved into advertising and marketing, and shortly after, I began a MA in Art and Technology. Next, I enrolled in a Full Stack Development Bootcamp, which I wrap up January 2024. I'm excited to begin my developer journey!
                         <br />
                         <br />
-                        I greatly enjoy Unity for designing 3D environments, Glitch.com and A-Frame to create AR/VR spaces, Adobe Premiere Pro and After Effects to create videos, and becoming proficient in front-end languages with an emphasis on UX/UI principles. I'm still working out the rest!
+                        While becoming proficient in front-end languages with an emphasis on UX/UI principles is my primary goal, I also working with Unity for designing 3D environments, Glitch.com and A-Frame to create AR/VR spaces, and Adobe Premiere Pro and After Effects to make and edit videos.
                         <br />
                         <br />
 
-                        Based in the Pacfic Northwest, I find my inspiration from nature, music, immersive art installations, motorcycles, travel, and
-                        creating of all sorts! I lean heavily into loud, maximalist art but also appreciate simple, delicate things. I believe balance is key!
+                        Based in the Pacfic Northwest, I find inspiration from nature, music, immersive art installations, motorcycles, travel, and
+                        creating of all sorts! I lean heavily into loud, maximalist art but also appreciate simple, delicate things. Achieving a balance is key!
                         </p>
                         <br />
                        
-                       <p style={{ color: '#D24FB3ff', marginBottom: '20px', fontFamily: 'monospace', fontSize: '1.3em' }}> 
-                       I look forward to meeting others and creating meaningful digital experiences together! 
-                       </p>
+                       
                     
                 </div>
                 <div
