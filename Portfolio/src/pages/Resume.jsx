@@ -8,7 +8,6 @@ function Resume() {
     <div
       style={{
         marginTop: '7rem',
-
         width: '100vw',
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
