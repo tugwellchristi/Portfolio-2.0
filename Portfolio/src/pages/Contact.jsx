@@ -4,9 +4,41 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [messageError, setMessageError] = useState('');
+
+    const validateEmail = (input) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(input);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Validate name
+        if (!name.trim()) {
+            setNameError('Name is required');
+            return;
+        } else {
+            setNameError('');
+        }
+
+        // Validate email
+        if (!validateEmail(email)) {
+            setEmailError('Invalid email address');
+            return;
+        } else {
+            setEmailError('');
+        }
+        
+        // Validate message
+        if (!message.trim()) {
+            setMessageError('Message is required');
+            return;
+        } else {
+            setMessageError('');
+        }
     };
 
     return (
@@ -23,35 +55,69 @@ const Contact = () => {
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
         >
-            <h1>Let's Connect!</h1>
+            <h1 style={{ color: 'white', fontFamily: 'monospace', fontSize: '36px' }}>Let's Connect!</h1>
             <div
-            style={{
-                width: '800px',
-                bacgroundColor: 'blue',
-                padding: '13px', 
-                borderRadius: '10px',
-                marginRight: '20px',
-            }}
+                style={{
+                    width: '800px',
+                    backgroundColor: '#151D52ff',
+                    padding: '13px',
+                    borderRadius: '10px',
+                    marginRight: '20px',
+                }}
             >
                 <form name="contact" onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor="name" style={{ color: 'white' }}>
+                        <label htmlFor="name" style={{ color: 'white', fontFamily: 'monospace', fontSize: '18px' }}>
                             Name
                         </label>
-                        <input 
-                        type="text"
-                        id="name"
-                        onChange={(e) => setName(e.target.value)}
-                        style={{ 
-                            width: '100%' 
-                        }}
+                        <input
+                            type="text"
+                            id="name"
+                            onChange={(e) => setName(e.target.value)}
+                            style={{
+                                width: '100%', 
+                                marginBottom: '20px',
+                            }}
                         />
+                        {nameError && <p style={{ color: '#D24FB3ff' }}>{nameError}</p>}
                     </div>
-                    <button type="submit">Submit</button>
+                    <div>
+                        <label htmlFor="email" style={{ color: 'white', fontFamily: 'monospace', fontSize: '18px' }}>
+                            Email
+                        </label>
+                        <input
+                            type="text"
+                            id="email"
+                            onChange={(e) => setEmail(e.target.value)}
+                            style={{
+                                width: '100%',
+                                marginBottom: '20px',
+                            }}
+                        />
+                        {emailError && <p style={{ color: '#D24FB3ff' }}>{emailError}</p>}
+                    </div>
+                    <div>
+                        <label htmlFor="message" style={{ color: 'white', fontFamily: 'monospace', fontSize: '18px' }}>
+                            Message
+                        </label>
+                        <input
+                            type="text"
+                            id="message"
+                            onChange={(e) => setMessage(e.target.value)}
+                            style={{
+                                width: '100%',
+                                marginBottom: '20px',
+                                minHeight: '150px'
+                            }}
+                        />
+                        {messageError && <p style={{ color: '#D24FB3ff' }}>{messageError}</p>}
+                    </div>
+                    <button style={{ color: 'white', backgroundColor: '#D24FB3ff', borderRadius: '5px', padding: '10px'}} type="submit">Submit</button>
                 </form>
             </div>
+            <p style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '20px', marginTop: '25px' }}>I look forward to hearing from you! </p>
         </section>
     );
-}
+};
 
 export default Contact;

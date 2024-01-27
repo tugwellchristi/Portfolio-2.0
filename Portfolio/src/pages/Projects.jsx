@@ -4,7 +4,8 @@ import { FaGithubSquare } from 'react-icons/fa';
 
 const CustomCard = ({ image, title, description, link, githubLink }) => {
   return (
-    <Card className="custom-card" style={{ margin: '25px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column' }}>
+    <Card className="custom-card" style={{ margin: '20px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column' }}>
+     <div style={{ margin: '25px'}}>
       <a href={link} target="_blank" rel="noopener noreferrer">
         <CardMedia
           component="img"
@@ -13,11 +14,11 @@ const CustomCard = ({ image, title, description, link, githubLink }) => {
           image={image}
         />
       </a>
-      <div style={{ marginLeft: '25px' }}>
+      <div>
         <h1 style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '1.7em', marginTop: '10px' }}>{title}</h1>
         <p style={{ fontFamily: 'monospace', color: 'white', fontSize: '1.2em', width: '70%' }}>{description}</p>
       </div>
-      <div style={{ marginLeft: '22px', marginBottom: '10px', marginTop: '3px' }}>
+      <div style={{ marginBottom: '10px', marginTop: '3px' }}>
         <a href={githubLink} target="_blank" rel="noopener noreferrer">
           <FaGithubSquare style={{ width: '30px', height: '30px', color: 'white' }} />
         </a>
@@ -28,6 +29,7 @@ const CustomCard = ({ image, title, description, link, githubLink }) => {
           transition: transform 0.3s ease-in-out;
         }
       `}</style>
+      </div>
     </Card>
   );
 };
@@ -101,7 +103,7 @@ function Projects() {
 
   return (
     <section
-      id="about"
+      id="projects"
       style={{
         marginTop: '125px',
         width: '100vw',
