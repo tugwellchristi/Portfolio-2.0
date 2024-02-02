@@ -40,7 +40,7 @@ function Projects() {
       image: "/Syntax.png",
       title: "Syntax Band Website",
       description: "MERN Group Project",
-      link: "https://github.com/grayd500/Syntax",
+      link: "https://syntax-8rz6.onrender.com/music",
       githubLink: "https://github.com/grayd500/Syntax",
     },
     {
