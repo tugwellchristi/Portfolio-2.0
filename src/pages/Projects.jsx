@@ -105,7 +105,7 @@ function Projects() {
     <section
       id="projects"
       style={{
-        marginTop: '125px',
+        marginTop: '100px',
         width: '100vw',
         background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
         display: 'flex',

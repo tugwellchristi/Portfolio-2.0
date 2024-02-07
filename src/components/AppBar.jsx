@@ -1,63 +1,28 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
 import { Link, useLocation } from 'react-router-dom';
-import Button from '@mui/material/Button';
-
-
-const pages = [
-  { name: 'About', path: '/about' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Contact', path: '/contact' },
-  { name: 'Resume', path: '/resume' },
-];
 
 function ResponsiveAppBar() {
   const hoverColor = '#FFFFFF';
   const textColor = '#D24FB3ff';
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const location = useLocation();
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const currentPage = useLocation().pathname;
 
   return (
-    <AppBar
-      className="appbar"
-      sx={{
-        height: '125px',
-        width: '100%',
-        top: 0,
-        position: 'fixed',
+    <header
+      className="fixed w-full top-0 z-10"
+      style={{
         backgroundColor: '#151D52ff',
+        height: '100px',
         color: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        paddingTop: '10px'
       }}
     >
-      <Container maxWidth="xl" sx={{ maxWidth: '100%' }}>
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            sx={{
-              flexGrow: 1,
-              textAlign: 'center',
+      <div className="container mx-auto md:flex md:items-center md:justify-between sm:flex sm:items-center sm:justify-between">
+        <div className="md:w-full sm:w-full text-center">
+          <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 sm:mr-auto sm:ml-4 sm:py-1 sm:pl-4 flex flex-wrap items-center justify-center text-base"
+            style={{
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
+              backgroundColor: '#151D52ff',
               color: location.pathname === '/' ? hoverColor : textColor,
               textDecoration: 'none',
               fontSize: '2rem',
@@ -66,70 +31,82 @@ function ResponsiveAppBar() {
             }}
           >
             {/* Link for Home */}
-            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+            <Link
+              to="/"
+              className="hidden lg:block mr-5 "
+              style={{ color: 'white', textDecoration: 'none' }}
+            >
               CHRISTI TUGWELL
             </Link>
-          </Typography>
+            {/* Home Link for smaller screens */}
+            <Link
+              to="/"
+              className="mr-5 sm:block md:block lg:hidden text-lg"
+              style={{
+                color: currentPage === '/' ? hoverColor : textColor,
+                textDecoration: 'none',
+              }}
+            >
+              Home
+            </Link>
 
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-            sx={{
-              display: { xs: 'block', md: 'none' },
-              '& .MuiMenuItem-root': {
-                margin: '8px 0',
-                padding: '16px',
-                fontSize: '1.5rem',
-              },
-            }}
-          >
-            {/* Use Link for each menu item */}
-            {pages.map((page) => (
-              <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                <Link
-                  to={page.path}
-                  style={{ color: location.pathname === page.path ? hoverColor : '#FA6A0Aff', textDecoration: 'none' }}
-                >
-                  <Typography textAlign="center">{page.name}</Typography>
-                </Link>
-              </MenuItem>
-            ))}
-          </Menu>
-
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-            {/* Use Link for each button */}
-            {pages.map((page) => (
-              <Button
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                sx={{ 
-                  my: 2, 
-                  color: location.pathname === page.path ? hoverColor : textColor, 
-                  fontSize: '1.5rem', 
-                  marginTop: '40px' 
-                }}
-                component={Link}
-                to={page.path}
-              >
-                {page.name}
-              </Button>
-            ))}
-
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar >
+            {/* Menu Bar Items */}
+            <Link
+              to="/about"
+              className="mr-5 text-lg"
+              style={{
+                color: currentPage === '/about' ? hoverColor : textColor,
+                textDecoration: 'none',
+              }}
+            >
+              About
+            </Link>
+            <Link
+              to="/projects"
+              className="mr-5 text-lg"
+              style={{
+                color: currentPage === '/projects' ? hoverColor : textColor,
+                textDecoration: 'none',
+              }}
+            >
+              Projects
+            </Link>
+            <Link
+              to="/contact"
+              className="mr-5 hover:text-white text-lg"
+              style={{
+                color: currentPage === '/contact' ? hoverColor : textColor,
+                textDecoration: 'none',
+              }}
+            >
+              Contact
+            </Link>
+            <Link
+              to="/resume"
+              className="mr-5 hover:text-white text-lg"
+              style={{
+                color: currentPage === '/resume' ? hoverColor : textColor,
+                textDecoration: 'none',
+              }}
+            >
+              Resume
+            </Link>
+          </nav>
+        </div>
+      </div>
+    </header >
   );
 }
 export default ResponsiveAppBar;
+
+
+
+
+
+
+
+
+
+
+
+

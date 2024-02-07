@@ -45,7 +45,7 @@ function About() {
                         I've worn many hats over the years. After a decade in hospitality management, I moved into advertising and marketing, and shortly after, I began a MA in Art and Technology. Next, I enrolled in a Full Stack Development Bootcamp, which I wrap up January 2024. I'm excited to begin my developer journey!
                         <br />
                         <br />
-                        While becoming proficient in front-end languages with an emphasis on UX/UI principles is my primary goal, I also working with Unity for designing 3D environments, Glitch.com and A-Frame to create AR/VR spaces, and Adobe Premiere Pro and After Effects to make and edit videos.
+                        While becoming proficient in front-end languages with an emphasis on UX/UI principles is my primary goal, I also enjoy working with Unity for designing 3D environments, Glitch.com and A-Frame to create AR/VR spaces, and Adobe Premiere Pro and After Effects to make and edit videos.
                         <br />
                         <br />
 
