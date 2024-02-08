@@ -5,30 +5,25 @@ import backgroundImage from '../assets/Abstract.png';
 function Home() {
     return (
         <div
+            className='h-screen md:h-auto bg-cover bg-center flex flex-col justify-center items-center font-mono font-bold text-white text-2xl md:text-4xl px-4'
             style={{
-                height: '780px',
+                height: '90vh',
                 width: '100vw',
                 backgroundImage: `url(${backgroundImage})`,
-                backgroundSize: 'cover',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontFamily: 'monospace',
-                fontWeight: 700,
                 letterSpacing: '.2rem',
-                color: 'white',
-                flexGrow: 1,
                 fontSize: '2rem',
-                marginTop: '60px',
+               
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
         >
-            <h2 fontWeight='bold' style={{ fontFamily: 'monospace', fontSize: '60px' }}>
+            <h2 className="text-4xl md:text-6xl mb-8 font-mono">
                 HI, I'M CHRISTI!
             </h2>
-            <h4 style={{ fontFamily: 'monospace' }}>
-            Front-End Developer <span style={{ color: '#D24FB3ff', position: 'relative', zIndex: 1 }}>//</span> Web Designer <span style={{ color: '#D24FB3ff', position: 'relative', zIndex: 1 }}>//</span> Art Enthusiast
+            <h4 className="text-2xl md:text-4xl font-mono lg:block md:hidden sm:hidden">
+            Front-End Developer <span style={{ color: '#D24FB3ff'}}>//</span> Web Designer <span style={{ color: '#D24FB3ff' }}>//</span> Art Enthusiast
+            </h4>
+            <h4 className="text-2xl md:text-4xl font-mono lg:hidden md:block sm:block text-center" style={{ letterSpacing: '.2rem'}}>
+            Front-End Developer <br /> Web Designer <br /> Art Enthusiast
             </h4>
         </div>
     );
