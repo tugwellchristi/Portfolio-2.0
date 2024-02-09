@@ -44,19 +44,16 @@ const Contact = () => {
     return (
         <section
             id="about"
+            className="py-8 md:py-16 lg:py-24 flex flex-col justify-center items-center"
             style={{
                 height: '840px',
                 width: '100vw',
                 background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
         >
-            <h1 style={{ color: 'white', fontFamily: 'monospace', fontSize: '36px' }}>Let's Connect!</h1>
-            <div
+            <h1 className="text-3xl md:text-4xl lg:text-4xl font-mono mb-8 text-white">Let's Connect!</h1>
+            <div className=" md:max-w-lg lg:max-w-xl sm:max-w-md"
                 style={{
                     width: '800px',
                     backgroundColor: '#151D52ff',
@@ -66,7 +63,7 @@ const Contact = () => {
                 }}
             >
                 <form name="contact" onSubmit={handleSubmit}>
-                    <div>
+                    <div className="mb-4">
                         <label htmlFor="name" style={{ color: 'white', fontFamily: 'monospace', fontSize: '18px' }}>
                             Name
                         </label>

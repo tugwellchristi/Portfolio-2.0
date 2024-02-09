@@ -12,9 +12,9 @@ function About() {
         >
             <div
             className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center">
-                <div className="max-w-xlg md:w-3/5 md:mr-12">
+                <div className="max-w-xlg md:w-3/5 md:mr-12 order-2 md:order-1">
                     <h1
-                    className="font-mono text-3xl md:text-4xl lg:text-4xl font-bold mb-4 mt-32 sm:mt-16 mx-16"
+                    className="font-mono text-3xl md:text-4xl lg:text-4xl font-bold mb-4 sm:mt-16 md:mt-8 mx-16"
                     style={{ color: '#D24FB3ff' }}
                     >
                         Front-End & UX/UI minded with Full Stack tendencies
@@ -39,11 +39,11 @@ function About() {
                        
                     
                 </div>
-                <div className="max-w-md md:w-1/3 md:ml-12 mt-14 md:mt-0 mb-6 md:mb-0">
+                <div className="max-w-md md:ml-12 mt-4 md:mt-0 mb-6 md:mb-0 order-1 md:order-2">
                     <img
                         src="/Me.jpg"
                         alt="Self portrait"
-                        className="w-full md:w-auto md:h-auto rounded-lg"
+                        className="lg:w-full md:w-2/3 sm:w-3/4 sm:ml-12 rounded-lg"
                         style={{  borderRadius: '10px' }}
                     />
                 </div>
