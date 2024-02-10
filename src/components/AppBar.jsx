@@ -1,9 +1,16 @@
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function ResponsiveAppBar() {
   const hoverColor = '#FFFFFF';
   const textColor = '#D24FB3ff';
   const currentPage = useLocation().pathname;
+
+  const resumeLink = 'https://docs.google.com/document/d/1MxepJG71C92PEXL1plYLjTVYs37SCTDzZ75fK0CoMu8/edit?usp=sharing';
+
+  const handleResumeClick = () => {
+    window.open(resumeLink, '_blank');
+  };
 
   return (
     <header
@@ -81,16 +88,19 @@ function ResponsiveAppBar() {
             >
               Contact
             </Link>
-            <Link
-              to="/resume"
+            <a
+              href={resumeLink}
               className="mr-5 hover:text-white text-lg"
               style={{
                 color: currentPage === '/resume' ? hoverColor : textColor,
                 textDecoration: 'none',
               }}
+              target="_blank" // Opens link in a new tab
+              rel="noopener noreferrer" // Security best practice
+              onClick={handleResumeClick} // Handles the click event
             >
               Resume
-            </Link>
+            </a>
           </nav>
         </div>
       </div>
