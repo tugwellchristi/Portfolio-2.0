@@ -103,19 +103,15 @@ function Projects() {
 
   return (
     <section
-      id="projects"
+      className="flex flex-col justify-center items-center"
       style={{
         marginTop: '100px',
         width: '100vw',
         background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
       }}
     >
-      <div className="container px-5 py-10 mx-auto">
+      <div className="container px-5 py-10 mx-auto lg:mr-40 md:mr-8">
         <Grid container spacing={4}>
           {cardsData.map((card, index) => (
             <Grid key={index} item xs={12} sm={6} md={4} lg={4}>

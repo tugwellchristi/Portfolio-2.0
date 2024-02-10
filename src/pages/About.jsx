@@ -35,16 +35,12 @@ function About() {
                         creating of all sorts! I lean heavily into loud, maximalist art but also appreciate simple, delicate things. Achieving a balance is key!
                         </p>
                         <br />
-                       
-                       
-                    
                 </div>
                 <div className="max-w-md md:ml-12 mt-4 md:mt-0 mb-6 md:mb-0 order-1 md:order-2">
                     <img
                         src="/Me.jpg"
                         alt="Self portrait"
                         className="lg:w-full md:w-2/3 sm:w-3/4 sm:ml-12 rounded-lg"
-                        style={{  borderRadius: '10px' }}
                     />
                 </div>
             </div>
