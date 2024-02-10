@@ -51,11 +51,11 @@ function Projects() {
       githubLink: "https://github.com/tugwellchristi/TapMap",
     },
     {
-      image: "/PlantP.png",
-      title: "Plant Parenthood App",
-      description: "Full-Stack Group Project",
-      link: "https://nameless-wave-14504-8d3cae4aaa8e.herokuapp.com/",
-      githubLink: "https://github.com/tugwellchristi/scary-potato",
+      image: "/Weather.png",
+      title: "Weather Dashboard",
+      description: "Server-Side APIs Project",
+      link: "https://simple-brash-vole.glitch.me/",
+      githubLink: "https://github.com/tugwellchristi/Weather-Dashboard",
     },
     {
       image: "/PasswordGen.png",
@@ -64,13 +64,7 @@ function Projects() {
       link: "https://tugwellchristi.github.io/JavaScript-Password-Generator/",
       githubLink: "https://github.com/tugwellchristi/JavaScript-Password-Generator",
     },
-    {
-      image: "/Weather.png",
-      title: "Weather Dashboard",
-      description: "Server-Side APIs Project",
-      link: "https://simple-brash-vole.glitch.me/",
-      githubLink: "https://github.com/tugwellchristi/Weather-Dashboard",
-    },
+    
     {
       image: "/Scheduler.png",
       title: "Daily Task Planner",
@@ -79,18 +73,18 @@ function Projects() {
       githubLink: "https://github.com/tugwellchristi/Daily-Task-PlannerLinks",
     },
     {
-      image: "/SocialDB.png",
-      title: "Social Network API",
-      description: "NoSQL Project",
-      link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
-      githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
-    },
-    {
       image: "/Notes.png",
       title: "Note Taker",
       description: "Express.js Project",
       link: "https://v2-notes-application-e1495e7ac2dc.herokuapp.com/notes",
       githubLink: "https://github.com/tugwellchristi/Note-Taker?tab=readme-ov-file",
+    },
+    {
+      image: "/SocialDB.png",
+      title: "Social Network API",
+      description: "NoSQL Project",
+      link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
+      githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
     },
     {
       image: "/ReadME.png",
