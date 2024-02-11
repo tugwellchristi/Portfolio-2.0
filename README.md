@@ -1,5 +1,7 @@
 # Portfolio - January 2024
 
+![HomePage](https://github.com/tugwellchristi/Portfolio-2.0/assets/90078824/d40a5af6-9263-4769-8e3b-fa407b240892)
+
 ## Project Description
 This project is an updated portfoilo from my current Full Stack Web Development Bootcamp set for completion January 2024, showcasing front-end, back-end, and full stack projects. Soon, it will also contains digital art pieces from my MA of Art and Technology program completed May 2023. I am leaning into front-end development and UX/UI design with a passion for digitally immersive spaces, including AR and VR experiences.
 
@@ -16,9 +18,6 @@ Coming soon:
 
 ## Deployed Site
 - Deployed Website [Here](https://imaginative-taiyaki-f2d727.netlify.app/)
-
-![HomePage](https://github.com/tugwellchristi/Portfolio-2.0/assets/90078824/d40a5af6-9263-4769-8e3b-fa407b240892)
-
 
 ## Contact
 For additional questions and support, reach me using the following:

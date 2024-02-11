@@ -31,7 +31,7 @@ const Contact = () => {
         } else {
             setEmailError('');
         }
-        
+
         // Validate message
         if (!message.trim()) {
             setMessageError('Message is required');
@@ -43,76 +43,74 @@ const Contact = () => {
 
     return (
         <section
-            id="about"
-            className="py-8 md:py-16 lg:py-24 flex flex-col justify-center items-center"
+            className="flex flex-col justify-center items-center"
             style={{
-                height: '840px',
+                minHeight: '100vh', // Ensure full height on smaller screens
                 width: '100vw',
                 background: 'linear-gradient(270deg, #00364Aff, #004690ff, #2A1F49ff)',
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
         >
-            <h1 className="text-3xl md:text-4xl lg:text-4xl font-mono mb-8 text-white">Let's Connect!</h1>
-            <div className=" md:max-w-lg lg:max-w-xl sm:max-w-md"
-                style={{
-                    width: '800px',
-                    backgroundColor: '#151D52ff',
-                    padding: '13px',
-                    borderRadius: '10px',
-                    marginRight: '20px',
-                }}
+            <h1 className="text-3xl md:text-4xl md:mt-24 sm:mt-32 lg:text-4xl lg:mt-0 font-mono mb-8 text-white">Let's Connect!</h1>
+            <div className="max-w-md md:w-3/4 sm:w-3/4  mx-auto flex flex-col lg:w-2/3 p-4 rounded"
+                style={{ backgroundColor: '#151D52ff' }}
             >
-                <form name="contact" onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label htmlFor="name" style={{ color: 'white', fontFamily: 'monospace', fontSize: '18px' }}>
+                <form className="flex flex-col" name="contact" onSubmit={handleSubmit}>
+                    <div className="relative mb-4">
+                        <label
+                            htmlFor="name"
+                            className="leading-7 text-white font-mono text-lg">
                             Name
                         </label>
                         <input
                             type="text"
                             id="name"
                             onChange={(e) => setName(e.target.value)}
-                            style={{
-                                width: '100%', 
-                                marginBottom: '20px',
-                            }}
+                            className="w-full mb-4 p-1 font-mono"
                         />
-                        {nameError && <p style={{ color: '#D24FB3ff' }}>{nameError}</p>}
+                        {nameError && <p style={{ color: '#D24FB3ff', fontFamily: 'monospace' }}>{nameError}</p>}
                     </div>
-                    <div>
-                        <label htmlFor="email" style={{ color: 'white', fontFamily: 'monospace', fontSize: '18px' }}>
+                    <div className="relative mb-4">
+                        <label
+                            htmlFor="email"
+                            className="leading-7 text-white font-mono text-lg"
+                        >
                             Email
                         </label>
                         <input
                             type="text"
                             id="email"
                             onChange={(e) => setEmail(e.target.value)}
-                            style={{
-                                width: '100%',
-                                marginBottom: '20px',
-                            }}
+                            className="w-full mb-4 p-1 font-mono"
                         />
-                        {emailError && <p style={{ color: '#D24FB3ff' }}>{emailError}</p>}
+                        {emailError && <p style={{ color: '#D24FB3ff', fontFamily: 'monospace' }}>{emailError}</p>}
                     </div>
-                    <div>
-                        <label htmlFor="message" style={{ color: 'white', fontFamily: 'monospace', fontSize: '18px' }}>
+                    <div className="relative mb-4">
+                        <label
+                            htmlFor="message"
+                            className="leading-7 text-white font-mono text-lg"
+                        >
                             Message
                         </label>
-                        <input
-                            type="text"
+                        <textarea
                             id="message"
                             onChange={(e) => setMessage(e.target.value)}
-                            style={{
-                                width: '100%',
-                                marginBottom: '20px',
-                                minHeight: '150px'
-                            }}
-                        />
-                        {messageError && <p style={{ color: '#D24FB3ff' }}>{messageError}</p>}
+                            className="w-full mb-2 p-1 font-mono"
+                            rows="4"
+                        ></textarea>
+                        {messageError && <p style={{ color: '#D24FB3ff', fontFamily: 'monospace' }}>{messageError}</p>}
                     </div>
-                    <button style={{ color: 'white', backgroundColor: '#D24FB3ff', borderRadius: '5px', padding: '10px'}} type="submit">Submit</button>
+                    <button
+                        className="text-white font-mono py-2 px-4 rounded"
+                        style={{ backgroundColor: '#D24FB3ff' }}
+                        type="submit"
+                    >Submit</button>
                 </form>
             </div>
-            <p style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '20px', marginTop: '25px' }}>I look forward to hearing from you! </p>
+            <p 
+            className="flex flex-col justify-center items-center font-mono lg:text-lg mt-3 p-1 ml-2 mr-5 sm:text-sm"
+            style={{ color: '#D24FB3ff' }}
+            >I look forward to hearing from you! </p>
         </section>
     );
 };
