@@ -5,25 +5,25 @@ import { FaGithubSquare } from 'react-icons/fa';
 const CustomCard = ({ image, title, description, link, githubLink }) => {
   return (
     <Card className="custom-card" style={{ margin: '20px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column' }}>
-     <div style={{ margin: '25px'}}>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <CardMedia
-          component="img"
-          alt={title}
-          height="300"
-          image={image}
-        />
-      </a>
-      <div>
-        <h1 style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '1.7em', marginTop: '10px' }}>{title}</h1>
-        <p style={{ fontFamily: 'monospace', color: 'white', fontSize: '1.2em', width: '70%' }}>{description}</p>
-      </div>
-      <div style={{ marginBottom: '10px', marginTop: '3px' }}>
-        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-          <FaGithubSquare style={{ width: '30px', height: '30px', color: 'white' }} />
+      <div style={{ margin: '25px' }}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <CardMedia
+            component="img"
+            alt={title}
+            height="300"
+            image={image}
+          />
         </a>
-      </div>
-      <style jsx>{`
+        <div>
+          <h1 style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '1.7em', marginTop: '10px' }}>{title}</h1>
+          <p style={{ fontFamily: 'monospace', color: 'white', fontSize: '1.2em', width: '70%' }}>{description}</p>
+        </div>
+        <div style={{ marginBottom: '10px', marginTop: '3px' }}>
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            <FaGithubSquare style={{ width: '30px', height: '30px', color: 'white' }} />
+          </a>
+        </div>
+        <style jsx>{`
         .custom-card:hover {
           transform: scale(1.5);
           transition: transform 0.3s ease-in-out;
@@ -64,7 +64,7 @@ function Projects() {
       link: "https://tugwellchristi.github.io/JavaScript-Password-Generator/",
       githubLink: "https://github.com/tugwellchristi/JavaScript-Password-Generator",
     },
-    
+
     {
       image: "/Scheduler.png",
       title: "Daily Task Planner",
