@@ -43,7 +43,7 @@ const Contact = () => {
 
     return (
         <section
-            className="flex flex-col justify-center items-center"
+            className="flex flex-col justify-center items-center mt-4"
             style={{
                 minHeight: '100vh', // Ensure full height on smaller screens
                 width: '100vw',
@@ -51,8 +51,8 @@ const Contact = () => {
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
             }}
         >
-            <h1 className="text-3xl md:text-4xl md:mt-24 sm:mt-32 lg:text-4xl lg:mt-0 font-mono mb-8 text-white">Let's Connect!</h1>
-            <div className="max-w-md md:w-3/4 sm:w-3/4  mx-auto flex flex-col lg:w-2/3 p-4 rounded"
+            <h1 className="mt-20 text-3xl md:text-4xl md:mt-24 sm:mt-24 lg:text-4xl lg:mt-0 font-mono mb-8 text-white">Let's Connect!</h1>
+            <div className="max-w-md md:w-3/4 sm:w-3/4 mx-auto flex flex-col lg:w-2/3 p-4 rounded"
                 style={{ backgroundColor: '#151D52ff' }}
             >
                 <form className="flex flex-col" name="contact" onSubmit={handleSubmit}>
@@ -108,7 +108,7 @@ const Contact = () => {
                 </form>
             </div>
             <p 
-            className="flex flex-col justify-center items-center font-mono lg:text-lg mt-3 p-1 ml-2 mr-5 sm:text-sm"
+            className="flex flex-col justify-center items-center font-mono lg:text-lg mt-1 p-5 ml-9 mr-5 sm:text-sm"
             style={{ color: '#D24FB3ff' }}
             >I look forward to hearing from you! </p>
         </section>
