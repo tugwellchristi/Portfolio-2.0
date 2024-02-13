@@ -53,7 +53,7 @@ const Contact = () => {
         >
             <h1 className="mt-32 text-3xl md:text-4xl md:mt-24 sm:mt-24 lg:text-4xl lg:mt-0 font-mono mb-8 text-white">Let's Connect!</h1>
             <div className="max-w-md md:w-3/4 sm:w-3/4 mx-auto flex flex-col lg:w-2/3 p-4 rounded"
-                style={{ backgroundColor: '#151D52ff' }}
+                style={{ backgroundColor: '#151D52ff', boxShadow: '0px 0px 3px 1px #D24FB3ff' }}
             >
                 <form className="flex flex-col" name="contact" onSubmit={handleSubmit}>
                     <div className="relative mb-4">

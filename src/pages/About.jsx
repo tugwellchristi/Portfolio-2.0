@@ -37,7 +37,7 @@ function About() {
                         src="/Me.jpg"
                         alt="Self portrait"
                         className="rounded-lg"
-                        style={{ maxWidth: '90%', height: 'auto' }}
+                        style={{ maxWidth: '80%', height: 'auto' }}
                     />
                 </div>
             </div>

@@ -4,7 +4,7 @@ import { FaGithubSquare } from 'react-icons/fa';
 
 const CustomCard = ({ image, title, description, link, githubLink }) => {
   return (
-    <Card className="custom-card" style={{ margin: '20px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column' }}>
+    <Card className="custom-card" style={{ margin: '20px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column', boxShadow: '0px 0px 3px 1px #D24FB3ff' }}>
       <div style={{ margin: '25px' }}>
         <a href={link} target="_blank" rel="noopener noreferrer">
           <CardMedia
@@ -76,7 +76,7 @@ function Projects() {
       image: "/Notes.png",
       title: "Note Taker",
       description: "Express.js Project",
-      link: "https://v2-notes-application-e1495e7ac2dc.herokuapp.com/notes",
+      link: "https://note-taker-6zne.onrender.com",
       githubLink: "https://github.com/tugwellchristi/Note-Taker?tab=readme-ov-file",
     },
     {
