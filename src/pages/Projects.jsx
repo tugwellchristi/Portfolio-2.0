@@ -79,19 +79,50 @@ function Projects() {
       link: "https://note-taker-6zne.onrender.com",
       githubLink: "https://github.com/tugwellchristi/Note-Taker?tab=readme-ov-file",
     },
+    // {
+    //   image: "/SocialDB.png",
+    //   title: "Social Network API",
+    //   description: "NoSQL Project",
+    //   link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
+    //   githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
+    // },
+    // {
+    //   image: "/ReadME.png",
+    //   title: "README.md Generator",
+    //   description: "Node.js Project",
+    //   link: "https://drive.google.com/file/d/1KuxJYpoeBgrCfwYyjjuYIRBt4g2Ojwe0/view",
+    //   githubLink: "https://github.com/tugwellchristi/README.md-Generator",
+    // },
+    // {
+    //   image: "/ReadME.png",
+    //   title: "README.md Generator",
+    //   description: "Node.js Project",
+    //   link: "https://drive.google.com/file/d/1KuxJYpoeBgrCfwYyjjuYIRBt4g2Ojwe0/view",
+    //   githubLink: "https://github.com/tugwellchristi/README.md-Generator",
+    // },
     {
-      image: "/SocialDB.png",
-      title: "Social Network API",
-      description: "NoSQL Project",
-      link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
-      githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
+      image: "/NW.png",
+      title: "NW Wanderer",
+      description: "Unity Game Engine Project",
+      link: "https://play.unity.com/mg/other/webgl-builds-340110",
     },
     {
-      image: "/ReadME.png",
-      title: "README.md Generator",
-      description: "Node.js Project",
-      link: "https://drive.google.com/file/d/1KuxJYpoeBgrCfwYyjjuYIRBt4g2Ojwe0/view",
-      githubLink: "https://github.com/tugwellchristi/README.md-Generator",
+      image: "/Winter.png",
+      title: "Winter Dreamin'",
+      description: "Adobe After Effects Project",
+      link: "https://vimeo.com/723921775?share=copy",
+    },
+    {
+      image: "/Hello.png",
+      title: "Hello Summer",
+      description: "Adobe After Effects Project",
+      link: "https://vimeo.com/725517272?share=copy",
+    },
+    {
+      image: "/AE.png",
+      title: "Relax",
+      description: "Adobe After Effects Project",
+      link: "https://vimeo.com/726232693?share=copy",
     },
   ];
 
@@ -106,6 +137,7 @@ function Projects() {
       }}
     >
       <div className="container px-5 py-10 mx-auto lg:mr-40 md:mr-8">
+      {/* <h1 className="text-3xl md:text-4xl md:mt-24 sm:mt-24 lg:text-4xl lg:mt-0 font-mono mb-8 text-white justify-center items-center flex flex-col">Web Development Projects</h1> */}
         <Grid container spacing={4}>
           {cardsData.map((card, index) => (
             <Grid key={index} item xs={12} sm={6} md={4} lg={4}>
