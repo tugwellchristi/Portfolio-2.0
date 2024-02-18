@@ -2,7 +2,8 @@ import React from "react";
 import { Grid, Card, CardMedia } from '@mui/material';
 import { FaGithubSquare } from 'react-icons/fa';
 
-const CustomCard = ({ image, title, description, link, githubLink }) => {
+const CustomCard = ({ image, title, description, link, githubLink, index }) => {
+  const showGithubLink = index < 6; // Display GitHub link for the first 6 cards
   return (
     <Card className="custom-card" style={{ margin: '20px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column', boxShadow: '0px 0px 3px 1px #D24FB3ff' }}>
       <div style={{ margin: '25px' }}>
@@ -18,11 +19,13 @@ const CustomCard = ({ image, title, description, link, githubLink }) => {
           <h1 style={{ color: '#D24FB3ff', fontFamily: 'monospace', fontSize: '1.7em', marginTop: '10px' }}>{title}</h1>
           <p style={{ fontFamily: 'monospace', color: 'white', fontSize: '1.2em', width: '70%' }}>{description}</p>
         </div>
-        <div style={{ marginBottom: '10px', marginTop: '3px' }}>
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <FaGithubSquare style={{ width: '30px', height: '30px', color: 'white' }} />
-          </a>
-        </div>
+        {showGithubLink && (
+          <div style={{ marginBottom: '10px', marginTop: '3px' }}>
+            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+              <FaGithubSquare style={{ width: '30px', height: '30px', color: 'white' }} />
+            </a>
+          </div>
+        )}
         <style jsx>{`
         .custom-card:hover {
           transform: scale(1.5);
@@ -33,6 +36,7 @@ const CustomCard = ({ image, title, description, link, githubLink }) => {
     </Card>
   );
 };
+
 
 function Projects() {
   const cardsData = [
@@ -107,12 +111,6 @@ function Projects() {
       link: "https://play.unity.com/mg/other/webgl-builds-340110",
     },
     {
-      image: "/Winter.png",
-      title: "Winter Dreamin'",
-      description: "Adobe After Effects Project",
-      link: "https://vimeo.com/723921775?share=copy",
-    },
-    {
       image: "/Hello.png",
       title: "Hello Summer",
       description: "Adobe After Effects Project",
@@ -123,6 +121,12 @@ function Projects() {
       title: "Relax",
       description: "Adobe After Effects Project",
       link: "https://vimeo.com/726232693?share=copy",
+    },
+    {
+      image: "/Winter.png",
+      title: "Winter Dreamin'",
+      description: "Adobe After Effects Project \nCaution: This content contains flashing objects, which may cause discomfort in sensitive individuals. Viewer discretion is advised.",
+      link: "https://vimeo.com/723921775?share=copy",
     },
   ];
 
@@ -141,7 +145,7 @@ function Projects() {
         <Grid container spacing={4}>
           {cardsData.map((card, index) => (
             <Grid key={index} item xs={12} sm={6} md={4} lg={4}>
-              <CustomCard {...card} />
+              <CustomCard {...card} index={index} />
             </Grid>
           ))}
         </Grid>
