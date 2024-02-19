@@ -1,14 +1,15 @@
 import React from 'react';
 
 function Resume() {
-  const resumeLink = 'https://docs.google.com/document/d/1MxepJG71C92PEXL1plYLjTVYs37SCTDzZ75fK0CoMu8/edit?usp=sharing';
+  const resumePdfFileName = 'Resume.pdf';
 
   const handleResumeClick = () => {
-    window.open(resumeLink, '_blank');
+    const resumePdfPath = process.env.PUBLIC_URL + '/' + resumePdfFileName;
+    window.open(resumePdfPath, '_blank');
   };
 
   return (
-    <button onClick={handleResumeClick}>View Resume</button>
+    <button onClick={handleResumeClick}>Download Resume (PDF)</button>
   );
 }
 

@@ -6,7 +6,7 @@ function ResponsiveAppBar() {
   const textColor = '#D24FB3ff';
   const currentPage = useLocation().pathname;
 
-  const resumeLink = 'https://docs.google.com/document/d/1MxepJG71C92PEXL1plYLjTVYs37SCTDzZ75fK0CoMu8/edit?usp=sharing';
+  const resumeLink = '/Resume.pdf';
 
   const handleResumeClick = () => {
     window.open(resumeLink, '_blank');
