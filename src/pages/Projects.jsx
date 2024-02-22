@@ -3,7 +3,7 @@ import { Grid, Card, CardMedia } from '@mui/material';
 import { FaGithubSquare } from 'react-icons/fa';
 
 const CustomCard = ({ image, title, description, link, githubLink, index }) => {
-  const showGithubLink = index < 6; // Display GitHub link for the first 6 cards
+  const showGithubLink = index < 8; // Display GitHub link for the first 6 cards
   return (
     <Card className="custom-card" style={{ margin: '20px', backgroundColor: '#151D52ff', display: 'flex', flexDirection: 'column', boxShadow: '0px 0px 3px 1px #D24FB3ff' }}>
       <div style={{ margin: '25px' }}>
@@ -40,13 +40,13 @@ const CustomCard = ({ image, title, description, link, githubLink, index }) => {
 
 function Projects() {
   const cardsData = [
-    // {
-    //   image: "/Syntax.png",
-    //   title: "Syntax Band Website",
-    //   description: "MERN Group Project",
-    //   link: "https://syntax-8rz6.onrender.com/music",
-    //   githubLink: "https://github.com/grayd500/Syntax",
-    // },
+    {
+      image: "/Syntax.png",
+      title: "Syntax Band Website",
+      description: "MERN Group Project",
+      link: "https://syntax-8rz6.onrender.com/music",
+      githubLink: "https://github.com/grayd500/Syntax",
+    },
     {
       image: "/TapMap.png",
       title: "TapMap Brewery App",
@@ -90,6 +90,13 @@ function Projects() {
       link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
       githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
     },
+    {
+      image: "/ReadME.png",
+      title: "README.md Generator",
+      description: "Node.js Project",
+      link: "https://drive.google.com/file/d/1KuxJYpoeBgrCfwYyjjuYIRBt4g2Ojwe0/view",
+      githubLink: "https://github.com/tugwellchristi/README.md-Generator",
+    },
     // {
     //   image: "/ReadME.png",
     //   title: "README.md Generator",
@@ -97,13 +104,12 @@ function Projects() {
     //   link: "https://drive.google.com/file/d/1KuxJYpoeBgrCfwYyjjuYIRBt4g2Ojwe0/view",
     //   githubLink: "https://github.com/tugwellchristi/README.md-Generator",
     // },
-    // {
-    //   image: "/ReadME.png",
-    //   title: "README.md Generator",
-    //   description: "Node.js Project",
-    //   link: "https://drive.google.com/file/d/1KuxJYpoeBgrCfwYyjjuYIRBt4g2Ojwe0/view",
-    //   githubLink: "https://github.com/tugwellchristi/README.md-Generator",
-    // },
+    {
+      image: "/Winter.png",
+      title: "Winter Dreamin'",
+      description: "Adobe After Effects Project \nCaution: This content contains flashing objects, which may cause discomfort in sensitive individuals. Viewer discretion is advised.",
+      link: "https://vimeo.com/723921775?share=copy",
+    },
     {
       image: "/NW.png",
       title: "NW Wanderer",
@@ -121,12 +127,6 @@ function Projects() {
       title: "Relax",
       description: "Adobe After Effects Project",
       link: "https://vimeo.com/726232693?share=copy",
-    },
-    {
-      image: "/Winter.png",
-      title: "Winter Dreamin'",
-      description: "Adobe After Effects Project \nCaution: This content contains flashing objects, which may cause discomfort in sensitive individuals. Viewer discretion is advised.",
-      link: "https://vimeo.com/723921775?share=copy",
     },
   ];
 
