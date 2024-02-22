@@ -40,13 +40,13 @@ const CustomCard = ({ image, title, description, link, githubLink, index }) => {
 
 function Projects() {
   const cardsData = [
-    {
-      image: "/Syntax.png",
-      title: "Syntax Band Website",
-      description: "MERN Group Project",
-      link: "https://syntax-8rz6.onrender.com/music",
-      githubLink: "https://github.com/grayd500/Syntax",
-    },
+    // {
+    //   image: "/Syntax.png",
+    //   title: "Syntax Band Website",
+    //   description: "MERN Group Project",
+    //   link: "https://syntax-8rz6.onrender.com/music",
+    //   githubLink: "https://github.com/grayd500/Syntax",
+    // },
     {
       image: "/TapMap.png",
       title: "TapMap Brewery App",
@@ -83,13 +83,13 @@ function Projects() {
       link: "https://note-taker-6zne.onrender.com",
       githubLink: "https://github.com/tugwellchristi/Note-Taker?tab=readme-ov-file",
     },
-    // {
-    //   image: "/SocialDB.png",
-    //   title: "Social Network API",
-    //   description: "NoSQL Project",
-    //   link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
-    //   githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
-    // },
+    {
+      image: "/SocialDB.png",
+      title: "Social Network API",
+      description: "NoSQL Project",
+      link: "https://drive.google.com/file/d/1I8WYESL2_4jtzMRcoSkgfaOLh8q0QX26/view?usp=sharingLinks",
+      githubLink: "https://github.com/tugwellchristi/Social-Network-API?tab=readme-ov-file",
+    },
     // {
     //   image: "/ReadME.png",
     //   title: "README.md Generator",
